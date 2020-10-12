@@ -1,5 +1,7 @@
 Contains work with Java from Udacity and other web resources while I learn Java and begin to work with a new IDE
 
+Chapter 1 (Variables) from Udacity:
+ 
 Java is case sensitive.
 Variable names must start with a letter, no whitespace.
 
@@ -55,4 +57,62 @@ The + can be used to concatanate strings.
 
 The print line command can use variables and strings to concatenate.
 
+Chapter 2(Control Flow)
+boolean isCold = ?; // true or false
+
+if(isCold) {
+    System.out.println("it's cold, wear a coat!");
+} else if(isWarm){
+    System.out.println("wear a t shirt!");
+} else {
+    System.out.println("Don't worry, go out naked!");
+}
+
+//Begining of MOSH tutorial
+package com.csmithswim;
+
+import java.awt.*;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter info for mortgage calculation.\n Principal: ");
+        String principal = scanner.nextLine().trim();
+        System.out.println(principal);
+    }
+}
+package com.csmithswim;
+
+import java.text.NumberFormat;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        final byte MONTHS_IN_YEAR=12;
+        final byte PERCENT = 100;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Principal: ");
+        int principal = scanner.nextInt();
+
+        System.out.print("Annual Interest Rate: ");
+        float annualInterestRate = scanner.nextFloat();
+        float monthlyInterest = annualInterestRate / PERCENT / MONTHS_IN_YEAR;
+
+        System.out.print("Period (Years): ");
+        byte years = scanner.nextByte();
+        int numberOfPayments = years * MONTHS_IN_YEAR;
+
+        double mortgage = principal
+                    * (monthlyInterest * Math.pow(1 + monthlyInterest, numberOfPayments))
+                    / (Math.pow(1+monthlyInterest, numberOfPayments) -1);
+        String mortgageFormatted = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.println("Mortgage: "+ mortgageFormatted);
+    }
+}
 
