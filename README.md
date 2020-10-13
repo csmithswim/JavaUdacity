@@ -116,3 +116,104 @@ public class Main {
     }
 }
 
+//If statements simplified
+public class Main {
+
+    public static void main(String[] args) {
+        int income = 120_000;
+        boolean hasHighIncome = (income > 100_000);             
+    }
+}
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Ternary Operator
+        int income = 120_000;
+        String className = income > 100_000 ? "First" : "Economy";
+    }
+}
+
+public class Main {
+
+    //Switch statement
+    public static void main(String[] args) {
+      String role = "admin";
+
+        switch (role) {
+            case "admin": 
+                System.out.println("You're an admin")
+                break;
+
+            case "moderator":
+                System.out.println("You're a moderator")
+                break;
+
+            default:
+                System.out.println("You're a guest");        
+      }
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+        //For Loops
+        for (int i = 0; i < 5; i++)
+            System.out.println("Hello World");
+     
+        //While loop
+        int i = 0;
+        while (i > 0) {
+            System.out.println("hello world " + i);
+        }
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+    //While loop with break and continue statements
+    Scanner scanner = new Scanner(System.in);
+    String input = "";
+        while (!input.equals("quit")){
+       //also can be written as:
+       while (true)
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            if (input.equals("pass"))
+                continue;
+            if (input.equals("quit"))
+                break;
+            System.out.println(input);
+        }
+
+        //Do while loop
+        do {
+            System.out.print("Input: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
+        } while (!input.equals("quit"))
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+           String[] fruits = { "Apple", "Mango", "Orange" };
+    for (String fruit: fruits)
+        System.out.println(fruit);    
+    }
+}
+
+
+
+
+
+
+
+
+
+
